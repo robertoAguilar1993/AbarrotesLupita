@@ -1,0 +1,29 @@
+
+/*Este estilo se aplico porque mostraba una fila de mas en los encabezados*/
+th.ng-scope {
+display : none; 
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+ padding: 5px;
+}
+table{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+table td {
+text-align: center;
+padding: 5px;
+height: 5px;
+}
+table th {
+text-align: center;
+padding: 5px;
+height: 5px;
+}
+tr:nth-child(even) {
+    background-color:#fff;
+}
+tr:nth-child(odd) {
+    background-color:#E0F2F7;
+}

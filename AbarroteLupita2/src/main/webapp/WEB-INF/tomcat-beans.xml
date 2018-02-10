@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Application context definition for PetClinic on JDBC.
+-->
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+			http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+			
+	<!--  
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="${dataSource.driver}" />
+		<property name="url" value="${dataSource.URL}" />
+		<property name="username" value="${dataSource.user}" />
+		<property name="password" value="${dataSource.password}" />
+	</bean>
+	-->
+	
+	<bean id="sessionFactory" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="jdbc.driver" value="oracle.jdbc.driver.OracleDriver" />
+        <property name="url" value="jdbc:oracle:thin:@localhost:1521:xe" />
+        <property name="user" value="ADMIN" />
+        <property name="password" value="oracle1" />
+        <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />
+        <property name="hibernate.hbm2ddl.auto" value="update" />
+    </bean>
+   
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager" 
+	p:dataSource-ref="dataSource" />
+	<!--
+ 	<bean id="dataSource" class="oracle.jdbc.pool.OracleDataSource">
+<property name="driverType" value="oracle.jdbc.OracleDriver" />
+<property name="URL" value="${dataSource.URL}" />
+<property name="user" value="${dataSource.user}" />
+<property name="password" value="${dataSource.password}" />
+</bean>
+	 -->
+</beans>
