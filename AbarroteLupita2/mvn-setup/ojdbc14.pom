@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>metlife</groupId>
+  <artifactId>ojdbc14</artifactId>
+  <version>1.0</version>
+  <url>http://metlife.com.mx</url>
+</project>
