@@ -6,6 +6,5 @@ Tecnologia a usar en este proyecto.
 + Rest
 + Spring
 + Hibernate
-+ boo
 + Bootstrap
 + CSS.
